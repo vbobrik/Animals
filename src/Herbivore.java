@@ -3,11 +3,13 @@ public class Herbivore extends Animal {
         super(weight);
     }
 
-    public void eat(Food food) {
+    public double eat(Food food) {
         if (food instanceof Meat) {
             System.out.println("Error");
+            return super.getWeight();
         } else {
-            super.setWeight(super.getWeight() + food.getWeight());
+           super.setWeight(super.getWeight() + food.getWeight());
+           return super.getWeight();
         }
     }
 }

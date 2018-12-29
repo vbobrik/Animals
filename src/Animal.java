@@ -14,7 +14,7 @@ abstract public class Animal implements Meat, Grass, Food{
         this.weight = weight;
     }
 
-    public abstract void eat(Food food);
+    public abstract double eat(Food food);
 
   /* public static double calcWeight() {
         if (type == Meat) {

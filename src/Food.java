@@ -1,6 +1,6 @@
 public interface Food {
 
     public double getWeight();
-    public double eat();
+    public void eat(Food food);
 
 }

@@ -4,4 +4,6 @@ public class Lion extends Predator {
     public Lion (double weight) {
         super(weight);
     }
+
+
 }
