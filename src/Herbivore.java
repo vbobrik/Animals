@@ -4,7 +4,7 @@ public class Herbivore extends Animal {
     }
 
     public double eat(Food food) {
-        if (food instanceof Meat) {
+        if (food instanceof Meat || super.getWeight() < food.getWeight()) {
             System.out.println("Error");
             return super.getWeight();
         } else {

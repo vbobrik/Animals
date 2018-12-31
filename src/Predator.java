@@ -6,11 +6,15 @@ public class Predator extends Animal {
 
     public double eat(Food food) {
         if (food instanceof Grass || super.getWeight() < food.getWeight()) {
-            System.out.println("Error");
+            //System.out.println("Error");
+            return Excetion;
         } else {
             super.setWeight(super.getWeight() + food.getWeight());
+            return super.getWeight();
         }
+
     }
+}
 
 
     /*public static void eat(String name,  double weightFood, Animal animal) {

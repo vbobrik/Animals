@@ -1,6 +1,5 @@
-abstract public class Animal implements Meat, Grass, Food{
+abstract public class Animal implements Meat{
     private double weight;
-    private String name;
 
     public double getWeight() {
         return this.weight;
@@ -16,10 +15,4 @@ abstract public class Animal implements Meat, Grass, Food{
 
     public abstract double eat(Food food);
 
-  /* public static double calcWeight() {
-        if (type == Meat) {
-            return this.weight * 0.1;
-        }
-        return this.weight;
-    }*/
 }

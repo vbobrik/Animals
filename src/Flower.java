@@ -1,7 +1,7 @@
-public class Canabis implements Grass{
+public class Flower implements Grass{
     private double weight;
 
-    public Canabis(double weight) {
+    public Flower(double weight) {
         this.weight = weight;
     }
 
