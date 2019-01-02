@@ -4,24 +4,23 @@ public class Predator extends Animal {
         super(weight);
     }
 
+    @Override
     public double eat(Food food) {
-        if (food instanceof Grass || super.getWeight() < food.getWeight()) {
-            //System.out.println("Error");
-            return Excetion;
-        } else {
-            super.setWeight(super.getWeight() + food.getWeight());
-            return super.getWeight();
+
+        if(this == food) {
+            throw new RuntimeException("Can not eat myself: " + this.getClass().getName());
         }
 
+        if (food instanceof Meat) {
+            if (this.getWeight() > food.getWeight()) {
+                this.setWeight(this.getWeight() + food.getWeight());
+            } else { System.out.println("Error. It's too big meal");}
+        } else {
+            System.out.println("Error. It's not a meat");
+        }
+        return super.getWeight();
     }
 }
 
 
-    /*public static void eat(String name,  double weightFood, Animal animal) {
-        if (animal instanceof Herbivore && getWeight < weightFood) {
-            System.out.println("Error");
-        }
 
-        double newWeight = getWeight + weightFood;
-    }*/
-}

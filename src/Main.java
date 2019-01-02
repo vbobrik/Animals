@@ -1,17 +1,43 @@
 public class Main {
     public static void main(String[] args) {
+
+        // create animals
         Animal elephant = new Elephant(800);
-        Food elephant1 = elephant;
-        Food canabis = new Canabis(50);
-        Animal lion = new Lion(440);
         Animal yourEx = new YourEx(90);
         Animal rabbit = new Rabbit(200);
-        Food flower = new Flower(30);
+        Animal lion = new Lion(440);
 
-        System.out.println(elephant.eat(canabis));
-        System.out.println(elephant.eat(elephant));
-        lion.eat(canabis);
-        lion.eat(rabbit);
+        // create Grass
+        Grass cannabis = new Canabis(50);
+        Grass flower = new Flower(100);
+
+        // create food
+        Food cannabisGrass = cannabis;
+        Food elephantMeat = elephant;
+        Food rabbitFood = rabbit;
+        Food lionFood = lion;
+        Food flowerFood = flower;
+        Food yourExFood = yourEx;
+
+// create lunch
+        lion.eat(rabbitFood);
+        System.out.println("Weight of lion is " + lion.getWeight());
+        lion.eat(elephantMeat);
+        System.out.println("Weight of lion is " + lion.getWeight());
+        lion.eat(rabbitFood);
+       // elephant.eat(elephantMeat);
+        System.out.println("Weight of lion is " + lion.getWeight());
+        lion.eat(elephantMeat);
+        System.out.println("Weight of lion is " + lion.getWeight());
+        System.out.println("------------------");
+        elephant.eat(lionFood);
+        System.out.println("Weight of elephant is " + elephant.getWeight());
+         rabbit.eat(flowerFood);
+        System.out.println("Weight of rabbit is " + rabbit.getWeight());
+       // rabbit.eat(rabbit);
+        lion.eat(flowerFood);
+
+
 
 
 
